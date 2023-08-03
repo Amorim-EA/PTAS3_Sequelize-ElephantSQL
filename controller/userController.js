@@ -10,9 +10,14 @@ const createUser = async (req, res) => {
         res.json('Cadastro de usuário realizado com sucesso!');
         console.log('Cadastro de usuário realizado com sucesso!');
     }).catch((erro) => {
-        res.error();
         console.log(`Ops, deu erro: ${erro}`);
     })
 }
 
-module.exports = { createUser };
+const findUsers = async (req, res) => {
+    var users = await User.findAll()
+        console.log("Mostrando as informações dos usuarios");
+        return res.json(users);
+}
+
+module.exports = { createUser, findUsers };

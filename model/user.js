@@ -1,6 +1,6 @@
 const db = require('../config/connection');
 
-const User = db.sequelize.define('Users',{
+const User = db.sequelize.define('User',{
     id: {
         type: db.Sequelize.INTEGER,
         autoIncrement: true,
@@ -22,5 +22,6 @@ const User = db.sequelize.define('Users',{
         unique: true
     },
     })
+    
 User.sync();
 module.exports = User;
