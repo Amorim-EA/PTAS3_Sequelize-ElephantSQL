@@ -1,4 +1,5 @@
 const { Sequelize } = require('sequelize');
+const pg = require('pg-hstore');
 
 const sequelize = new Sequelize("postgres://yzvcrxjm:4GH3mpblBHlkzv8cAIsWxu9iKQvF93dQ@babar.db.elephantsql.com/yzvcrxjm",{
 define:{
