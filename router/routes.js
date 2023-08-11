@@ -3,6 +3,8 @@ const routes = express.Router();
 
 const userController = require('../controller/userController');
 
+routes.get('/', (req,res) => res.send("API-USER"));
+
 routes.get('/user/:id', userController.findUser);
 
 routes.get('/user', userController.findUsers);
