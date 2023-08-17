@@ -1,16 +1,12 @@
 const { Sequelize } = require('sequelize');
-const pg = require('pg-hstore');
+const pg = require('pg');
 
 const sequelize = new Sequelize("postgres://yzvcrxjm:4GH3mpblBHlkzv8cAIsWxu9iKQvF93dQ@babar.db.elephantsql.com/yzvcrxjm",{
-dialect: 'postgres',
-define:{
-  timetamps:true,
-  underscored:true,
-},
-dialectOptions: {
-  ssl: true,
-  hstore: pg,
-},
+  define:{
+    timetamps:true,
+    underscored:true,
+  },
+  dialectModule: pg
 });
 
   try {
