@@ -26,7 +26,7 @@ const findUser = async (req, res) => {
 const findUsers = async (req, res) => {
     var users = await User.findAll()
         console.log("Mostrando as informações dos usuarios");
-        return res.json(users);
+        return users;
 }
 
 const deleteUser = async (req, res) => {
